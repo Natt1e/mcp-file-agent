@@ -10,9 +10,9 @@ pip install openai
 
 ## 运行命令
 运行前首先要配置环境变量，其中包括 :
-OPENAI_API_KEY  : 调用LLM的api_key （sk-xxx）
-OPENAI_BASE_URL : 调用LLM的base_url 
-MODEL           : 使用的LLM
+* OPENAI_API_KEY  : 调用LLM的api_key （sk-xxx）
+* OPENAI_BASE_URL : 调用LLM的base_url 
+* MODEL           : 使用的LLM
 创建.env文件，向其中写入这三项即可 
 ```
 OPENAI_API_KEY=sk-xx
