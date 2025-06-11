@@ -1,7 +1,7 @@
-#Summary 
+# Summary 
 This is a very simple, Python-based and MCP-based agent that can operate files.
 
-##Environment
+## Environment
 It is easy to prepare the env.
 ```
 pip install "mcp[cli]" httpx
@@ -9,7 +9,7 @@ pip install mcp anthropic python-dotenv
 pip install openai
 ```
 
-##Running
+## Running
 Before running, we should configure our environment varibles, which include:
 OPENAI_API_KEY  : the api_key for calling the llm 
 OPENAI_BASE_URL : the base_url for calling the llm
