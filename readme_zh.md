@@ -1,5 +1,5 @@
-# 总览
-这是一个非常简单的 可以操作文件的 基于MCP的 用python编写的 agent
+# MCP-filesystem-python
+MCP官方写的filesystem的服务器是拿ts写的，我用python重写了一下，可能会有bug
 
 ## 环境配置
 ```

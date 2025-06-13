@@ -15,8 +15,24 @@ import { zodToJsonSchema } from "zod-to-json-schema";
 import { diffLines, createTwoFilesPatch } from 'diff';
 import { minimatch } from 'minimatch';
 
+// Command line argument parsing
+const args = process.argv.slice(2);
+if (args.length === 0) {
+  console.error("Usage: mcp-server-filesystem <allowed-directory> [additional-directories...]");
+  process.exit(1);
+}
 
+// Normalize all paths consistently
+function normalizePath(p: string): string {
+  return path.normalize(p);
+}
 
+function expandHome(filepath: string): string {
+  if (filepath.startsWith('~/') || filepath === '~') {
+    return path.join(os.homedir(), filepath.slice(1));
+  }
+  return filepath;
+}
 
 // Store allowed directories in normalized form
 const allowedDirectories = args.map(dir =>

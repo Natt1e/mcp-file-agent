@@ -1,5 +1,6 @@
-# Summary 
-This is a very simple, Python-based and MCP-based agent that can operate files.
+# MCP-filesystem-python
+This is the MCP filesystem server implemented in Python, which is implemented in typescript by modelcontextprotool.(https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem)
+
 
 ## Environment
 It is easy to prepare the env.
@@ -25,4 +26,14 @@ MODEL=gpt-4o-mini
 Then we can run it :
 ```
 python mcpOpenaiClientClient.py filesystemServer.py <target_dir>
+```
+## Example
+```
+    -examples
+        -little_red.txt 
+            This txt describes the story of Little Riding Hood
+```
+We can try like this :
+```
+python openai_client.py filesystem ./examples
 ```
